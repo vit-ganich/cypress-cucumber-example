@@ -1,0 +1,9 @@
+Bundled features files
+
+When running Cypress tests in a headless mode, the execution time can get pretty bloated, 
+this happens because by default Cypress will relaunch the browser between every feature file. 
+The cypress-cucumber-preprocessor gives you the option to bundle all feature files before 
+running the tests, therefore reducing the execution time.
+
+You can take advantage of this by creating .features files. 
+You choose to have only one in the root of the directory cypress/integrations or per directory.

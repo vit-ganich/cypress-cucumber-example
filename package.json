@@ -1,0 +1,60 @@
+{
+  "name": "cypress-example",
+  "version": "1.0.0",
+  "description": "Example repo for E2E test automation with Cypress",
+  "main": "index.js",
+  "scripts": {
+    "eslint": "eslint --ext *.js,*.jsx,*.ts,*.tsx",
+    "prettier": "prettier --write -- **/*.{js,json,md,prettierrc,ts}",
+    "test": "npx cypress run --spec **/*.features --browser chrome; npm run generate-report",
+    "generate-report": "ts-node report-generator.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vit-ganich/cypress-example.git"
+  },
+  "keywords": [
+    "cypress",
+    "e2e"
+  ],
+  "author": "Vitali Hanich",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vit-ganich/cypress-example/issues"
+  },
+  "homepage": "https://github.com/vit-ganich/cypress-example#readme",
+  "dependencies": {
+    "cypress": "^9.1.1",
+    "ts-node": "^10.4.0"
+  },
+  "devDependencies": {
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "@tsconfig/node14": "^1.0.1",
+    "@types/cypress-cucumber-preprocessor": "^4.0.1",
+    "@types/node": "^14.18.0",
+    "@typescript-eslint/eslint-plugin": "^5.7.0",
+    "@typescript-eslint/parser": "^5.7.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-dotenv": "^2.0.0",
+    "cypress-xpath": "^1.6.2",
+    "dotenv": "^10.0.0",
+    "eslint": "^8.4.1",
+    "eslint-config-prettier": "^8.3.0",
+    "mochawesome": "^7.0.1",
+    "mochawesome-merge": "^4.2.1",
+    "mochawesome-report-generator": "^6.0.1",
+    "multiple-cucumber-html-reporter": "^1.18.3",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.4"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "stepDefinitions": "cypress/support/step_definitions",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "reports",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  }
+}

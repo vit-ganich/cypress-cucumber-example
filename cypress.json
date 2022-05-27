@@ -1,0 +1,8 @@
+{
+  "baseUrl": "https://example.cypress.io",
+  "video": true,
+  "videosFolder": "reports/videos",
+  "screenshotsFolder": "reports/screenshots",
+  "chromeWebSecurity": false,
+  "testFiles": "**/*.{feature,features}"
+}
